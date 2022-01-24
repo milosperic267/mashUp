@@ -11,24 +11,5 @@
 </head>
 <body>
 
-<div class="input-group mb-3 search">
-    <input type="text" class="form-control" placeholder="search..." aria-label="Search"
-           aria-describedby="button-addon2">
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-</div>
-
-<!--<h1 th:text="${StockModelSimple}"></h1>-->
-<div class="box">
-    <tr th:each="bestMatch: ${StockModelSimple}">
-        <div class="element">
-            <div class="symbol">
-                <td th:text="${bestMatch.symbol}"/>
-            </div>
-            <div class="name">
-                <td th:text="${bestMatch.name}"/>
-            </div>
-        </div>
-    </tr>
-</div>
 </body>
 </html>

@@ -8,8 +8,10 @@ import java.util.List;
 public class SearchResult {
     @JsonProperty("bestMatches")
     private List<StockModelSimple> bestMatches = new ArrayList<>();
+  
 
-    public SearchResult(){
+
+	public SearchResult(){
 
     }
 
