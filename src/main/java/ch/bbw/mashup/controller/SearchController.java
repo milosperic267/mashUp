@@ -16,21 +16,18 @@ import ch.bbw.mashup.services.StockServiceImpl;
 
 @Controller
 public class SearchController {
-	
-	 	RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
-	 
 	    @Autowired
-	    private StockService stockService = new StockServiceImpl(restTemplateBuilder);
+	    private StockService stockService;
 	    
 	    @GetMapping("/search")
-	    public ModelAndView showStock(){
+	    public ModelAndView showSearch(){
 	        ModelAndView mv = new ModelAndView();
 	        mv.setViewName("search");
 	        return mv;
 	    }
 	   
 	    @PostMapping("/search")
-	    public ModelAndView showStock(@RequestParam("input") String input){
+	    public ModelAndView searchStocks(@RequestParam("input") String input){
 	    	SearchResult searchResults = stockService.getSearchedStocks(input);
 	        ModelAndView mv = new ModelAndView();
 	        mv.setViewName("search");

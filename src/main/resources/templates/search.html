@@ -22,14 +22,19 @@
 <div class="box">
     <tr th:each="bestMatch: ${StockModelSimple}">
         <div class="element">
+<form th:action="@{/home}" method="get">
+            <button type="submit" name="symbol" th:value="${bestMatch.symbol}">
             <div class="symbol">
                 <td th:text="${bestMatch.symbol}"/>
             </div>
             <div class="name">
                 <td th:text="${bestMatch.name}"/>
             </div>
+            </button>
+</form>
         </div>
     </tr>
 </div>
+
 </body>
 </html>

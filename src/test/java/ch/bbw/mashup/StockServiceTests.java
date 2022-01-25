@@ -11,8 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class StockServiceTests {
-    RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
-    private StockServiceImpl stockService = new StockServiceImpl(restTemplateBuilder);
+    private StockServiceImpl stockService = new StockServiceImpl();
 
     @Test
      void getStocksFromJsonTest(){
