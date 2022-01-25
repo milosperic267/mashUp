@@ -33,17 +33,8 @@ public class StockModelSimple {
     @JsonProperty("9. matchScore")
     private String matchscore;
 
-    public StockModelSimple(String symbol, String name, String type, String region, String marketOpen, String marketClose, String timezone, String currency, String matchscore) {
-        this.symbol = symbol;
-        this.name = name;
-        this.type = type;
-        this.region = region;
-        this.marketOpen = marketOpen;
-        this.marketClose = marketClose;
-        this.timezone = timezone;
-        this.currency = currency;
-        this.matchscore = matchscore;
-    }
+
+    public StockModelSimple(){}
 
     public String getSymbol() {
         return symbol;
