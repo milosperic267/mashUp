@@ -1,6 +1,6 @@
 package ch.bbw.mashup;
 
-import ch.bbw.mashup.services.StockServiceImpl;
+import ch.bbw.mashup.services.stocks.StockServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

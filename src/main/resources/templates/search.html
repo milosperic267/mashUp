@@ -20,19 +20,17 @@
 
 
 <div class="box">
-    <tr th:each="bestMatch: ${StockModelSimple}">
-        <div class="element">
+    <tr th:each="bestMatch: ${BestMatches}">
 <form th:action="@{/home}" method="get">
-            <button type="submit" name="symbol" th:value="${bestMatch.symbol}">
+            <button class="elementButton" type="submit" name="symbol" th:value="${bestMatch.getSymbol()}">
             <div class="symbol">
-                <td th:text="${bestMatch.symbol}"/>
+                <td th:text="${bestMatch.getSymbol()}"/>
             </div>
             <div class="name">
-                <td th:text="${bestMatch.name}"/>
+                <td th:text="${bestMatch.getName()}"/>
             </div>
             </button>
 </form>
-        </div>
     </tr>
 </div>
 

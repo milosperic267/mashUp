@@ -14,6 +14,10 @@ public class StockSymbol {
 
     protected StockSymbol(){}
 
+    public String getSymbol() {
+        return symbol;
+    }
+
     public StockSymbol(String symbol){
         this.symbol = symbol;
     }
@@ -23,8 +27,15 @@ public class StockSymbol {
         this.id = id;
     }
 
-
     public Long getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "StockSymbol{" +
+                "id=" + id +
+                ", symbol='" + symbol + '\'' +
+                '}';
     }
 }

@@ -3,7 +3,7 @@ body{
 }
 
 .search{
-    width: 250px;
+    height: 30px;
 }
 
 .box{
@@ -19,6 +19,34 @@ body{
     margin-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
-    width: 250px;
+    width: 280px;
+}
+
+.text{
+    display: flex;
+    justify-content: start;
+}
+
+.elementButton{
+    display: flex;
+    justify-content: space-between;
+    border: 2px #0c4128 solid;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 280px;
+}
+
+.detailsBox{
+    border: 2px #0c4128 solid;
+    width: 200px;
+    padding: 10px;
+}
+
+.boxDetail{
+    border: 2px #0c4128 solid;
+    width: 200px;
+    padding: 10px;
 }
 

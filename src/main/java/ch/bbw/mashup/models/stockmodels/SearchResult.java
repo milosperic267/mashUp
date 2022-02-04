@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SearchResult {
     @JsonProperty("bestMatches")
-    private List<StockModelSimple> bestMatches = new ArrayList<>();
+    private List<SearchResultStockModel> bestMatches = new ArrayList<>();
   
 
 
@@ -15,11 +15,11 @@ public class SearchResult {
 
     }
 
-    public List<StockModelSimple> getBestMatches() {
+    public List<SearchResultStockModel> getBestMatches() {
         return bestMatches;
     }
 
-    public void setBestMatches(List<StockModelSimple> bestMatches) {
+    public void setBestMatches(List<SearchResultStockModel> bestMatches) {
         this.bestMatches = bestMatches;
     }
 }

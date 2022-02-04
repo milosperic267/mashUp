@@ -10,6 +10,28 @@
     <title>Home</title>
 </head>
 <body>
+<form th:action="@{/search}" method="post" >
+    <div class="search">
+        <input type="text" placeholder="search..." id="input" name="input">
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+
+<div class="box">
+    <tr th:each="simpleStockModel: ${SimpleStockModelList}">
+            <form th:action="@{/details}" method="get">
+                <button class="elementButton" type="submit" name="symbol" th:value="${simpleStockModel.getSymbol()}?: 'No Information'">
+                    <div class="symbol">
+                        <td th:text="${simpleStockModel.getSymbol()}?: 'No Information'"/>
+                    </div>
+                    <div class="name">
+                        <td th:text="${simpleStockModel.getName()}?: 'No Information'"/>
+                    </div>
+                </button>
+            </form>
+    </tr>
+</div>
 
 </body>
 </html>

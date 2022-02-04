@@ -1,10 +1,9 @@
 package ch.bbw.mashup;
 
 import ch.bbw.mashup.models.stockmodels.SearchResult;
-import ch.bbw.mashup.services.StockServiceImpl;
+import ch.bbw.mashup.services.stocks.StockServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

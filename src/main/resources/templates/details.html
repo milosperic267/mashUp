@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+<form th:action="@{/search}" method="post">
+    <div class="search">
+        <input type="text" placeholder="search..." id="input" name="input">
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+<div class="detailsBox">
+    <div class="text">
+        <p>Volume: &nbsp;&nbsp;</p>
+        <p th:text="${StockDetails.getTimeSeriesModels().get(StockDetails.getMetaData().getLastRefreshed()).getVolume()}"/>
+    </div>
+    <div class="text">
+        <p>Close: &nbsp;&nbsp;</p>
+        <p th:text="${StockDetails.getTimeSeriesModels().get(StockDetails.getMetaData().getLastRefreshed()).getClose()}"/>
+    </div>
+    <div class="text">
+        <p>High: &nbsp;&nbsp;</p>
+        <p th:text="${StockDetails.getTimeSeriesModels().get(StockDetails.getMetaData().getLastRefreshed()).getHigh()}"/>
+    </div>
+    <div class="text">
+        <p>Low: &nbsp;&nbsp;</p>
+        <p th:text="${StockDetails.getTimeSeriesModels().get(StockDetails.getMetaData().getLastRefreshed()).getLow()}"/>
+    </div>
+
+    <div class="text">
+        <p>Open: &nbsp;&nbsp;</p>
+        <p th:text="${StockDetails.getTimeSeriesModels().get(StockDetails.getMetaData().getLastRefreshed()).getOpen()}"/>
+    </div>
+</div>
+
+<form th:action="@{/news}" method="get" name="keyword">
+    <button type="submit" name="keyword" th:text="${StockDetails.getMetaData().getSymbol()}"
+            th:value="${StockDetails.getMetaData().getSymbol()}"></button>
+</form>
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties
-public class StockModelSimple {
+public class SearchResultStockModel {
     @JsonProperty("1. symbol")
     private String symbol;
 
@@ -34,7 +34,7 @@ public class StockModelSimple {
     private String matchscore;
 
 
-    public StockModelSimple(){}
+    public SearchResultStockModel(){}
 
     public String getSymbol() {
         return symbol;
